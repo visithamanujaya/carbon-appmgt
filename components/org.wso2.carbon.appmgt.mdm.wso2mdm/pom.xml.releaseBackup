@@ -3,14 +3,14 @@
     <parent>
         <groupId>org.wso2.carbon.appmgt</groupId>
         <artifactId>carbon-appmgt</artifactId>
-        <version>2.0.0-SNAPSHOT</version>
+        <version>1.1.1-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <version>2.0.0-SNAPSHOT</version>
-    <artifactId>org.wso2.carbon.appmgt.mdm.wso2emm</artifactId>
+    <version>1.1.1-SNAPSHOT</version>
+    <artifactId>org.wso2.carbon.appmgt.mdm.wso2mdm</artifactId>
     <packaging>bundle</packaging>
-    <name>WSO2 Carbon - App Manager WSO2 EMM Component</name>
+    <name>WSO2 Carbon - App Manager WSO2 MDM Component</name>
     <url>http://maven.apache.org</url>
 
     <repositories>
@@ -58,8 +58,7 @@
                     <instructions>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>${project.artifactId}</Bundle-Name>
-                        <Bundle-Version>${carbon.appmgt.bundle.version}</Bundle-Version>
-                        <Private-Package>org.wso2.carbon.appmgt.mdm.wso2emm.internal</Private-Package>
+                        <Private-Package>org.wso2.carbon.appmgt.mdm.wso2mdm.internal</Private-Package>
                         <Import-Package>
                             org.wso2.carbon.appmgt.mobile.utils.*,
                             org.wso2.carbon.appmgt.mobile.mdm.*,
@@ -67,7 +66,7 @@
                             *;resolution:=optional
                         </Import-Package>
                         <Export-Package>
-                            org.wso2.carbon.appmgt.mdm.wso2emm.*
+                            org.wso2.carbon.appmgt.mdm.wso2mdm.*
                         </Export-Package>
                     </instructions>
                 </configuration>

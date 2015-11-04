@@ -23,7 +23,6 @@ authenticator=new AuthService.Authenticator();
 authenticator.init(jagg,session);
 //var getDocs=jagg.module('documentation').getAllDocumentations;
 
-
 var carbon = require('carbon');
 var tenantIdVal = Packages.org.wso2.carbon.context.CarbonContext.getThreadLocalCarbonContext().getTenantId();
 
@@ -250,10 +249,6 @@ require('/modules/store.js').exec(function (ctx) {
 
 
     var assetsByProvider = getAssetsFromProvider(asset, store);
-
-
-
-
 
     var docs;
     if (authenticator.getLoggedInUser()) {

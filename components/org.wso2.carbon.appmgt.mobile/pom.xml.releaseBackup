@@ -3,14 +3,15 @@
     <parent>
         <groupId>org.wso2.carbon.appmgt</groupId>
         <artifactId>carbon-appmgt</artifactId>
-        <version>2.0.0-SNAPSHOT</version>
+        <version>1.1.1-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
-    <version>2.0.0-SNAPSHOT</version>
-    <artifactId>org.wso2.carbon.appmgt.mdm.wso2emm</artifactId>
+    <version>1.1.1-SNAPSHOT</version>
+    <artifactId>org.wso2.carbon.appmgt.mobile</artifactId>
     <packaging>bundle</packaging>
-    <name>WSO2 Carbon - App Manager WSO2 EMM Component</name>
+    <name>WSO2 Carbon - App Manager Mobile Component</name>
     <url>http://maven.apache.org</url>
 
     <repositories>
@@ -58,16 +59,28 @@
                     <instructions>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>${project.artifactId}</Bundle-Name>
-                        <Bundle-Version>${carbon.appmgt.bundle.version}</Bundle-Version>
-                        <Private-Package>org.wso2.carbon.appmgt.mdm.wso2emm.internal</Private-Package>
+                        <Private-Package>org.wso2.carbon.appmgt.mobile.internal</Private-Package>
                         <Import-Package>
-                            org.wso2.carbon.appmgt.mobile.utils.*,
-                            org.wso2.carbon.appmgt.mobile.mdm.*,
-                            org.wso2.carbon.appmgt.mobile.interfaces.*,
+                            org.xml.sax.*,
+                            org.wso2.carbon.utils.*,
+                            org.wso2.carbon.user.api.*,
+                            org.wso2.carbon.registry.core.session.*,
+                            org.wso2.carbon.registry.core.exceptions.*,
+                            org.wso2.carbon.registry.core.*,
+                            org.wso2.carbon.registry.api.*,
+                            org.wso2.carbon.governance.api.util.*,
+                            org.wso2.carbon.governance.api.generic.dataobjects.*,
+                            org.wso2.carbon.governance.api.generic.*,
+                            org.wso2.carbon.governance.api.exception.*,
+                            org.wso2.carbon.context.*,
                             *;resolution:=optional
                         </Import-Package>
                         <Export-Package>
-                            org.wso2.carbon.appmgt.mdm.wso2emm.*
+                            org.wso2.mobile.utils.utilities.*,
+                            org.wso2.carbon.appmgt.mobile.mdm.*,
+                            org.wso2.carbon.appmgt.mobile.store.*,
+                            org.wso2.carbon.appmgt.mobile.utils.*,
+                            org.wso2.carbon.appmgt.mobile.interfaces.*
                         </Export-Package>
                     </instructions>
                 </configuration>
@@ -107,10 +120,6 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon.appmgt</groupId>
-            <artifactId>org.wso2.carbon.appmgt.mobile</artifactId>
         </dependency>
     </dependencies>
 
